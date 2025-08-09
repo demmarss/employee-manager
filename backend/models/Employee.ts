@@ -9,57 +9,57 @@ export class Employee extends Model {
   @PrimaryKey
   @AutoIncrement
   @Column(DataType.INTEGER)
-  id!: number;
+  declare id: number;
 
   @Column({
     type: DataType.STRING(255),
     allowNull: false,
   })
-  name!: string;
+  declare name: string;
 
   @Column({
     type: DataType.TEXT,
     allowNull: true,
   })
-  address?: string;
+  declare address?: string;
 
   @Column({
     type: DataType.JSON,
     allowNull: true,
   })
-  roles?: string[];
+  declare roles?: string[];
 
   @Column({
     type: DataType.DATE,
     allowNull: true,
   })
-  dateOfBirth?: Date;
+  declare dateOfBirth?: Date;
 
   @Column({
     type: DataType.STRING(20),
     allowNull: true,
   })
-  phoneNumber?: string;
+  declare phoneNumber?: string;
 
   @Column({
     type: DataType.STRING(255),
     allowNull: false,
     unique: true,
   })
-  email!: string;
+  declare email: string;
 
   @Column({
     type: DataType.STRING(255),
     allowNull: false,
   })
-  password!: string;
+  declare password: string;
 
   @Column({
     type: DataType.TEXT,
     allowNull: true,
   })
-  photoUrl?: string;
+  declare photoUrl?: string;
 
   @HasMany(() => EmployeePosition)
-  employeePositions!: EmployeePosition[];
+  declare employeePositions: EmployeePosition[];
 }
