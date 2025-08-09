@@ -133,7 +133,7 @@ export class ChatService {
           "View organization details",
           "Create new organization",
           "Edit organization info",
-          "Manage departments"
+          "Manage departments",
           "View organization chart"
         ]
       };
