@@ -15,8 +15,8 @@ import { OrganogramView } from './pages/organogram/OrganogramView';
 
 function App() {
   return (
-    <ChatProvider>
-      <Router>
+    <Router>
+      <ChatProvider>
         <Layout>
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -36,8 +36,8 @@ function App() {
             <Route path="/employees/create" element={<EmployeeDetail />} />
           </Routes>
         </Layout>
-      </Router>
-    </ChatProvider>
+      </ChatProvider>
+    </Router>
   );
 }
 
