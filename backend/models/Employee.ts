@@ -5,7 +5,7 @@ import { EmployeePosition } from './EmployeePosition.js';
   tableName: 'employees',
   timestamps: true,
 })
-export class Employee extends Model {
+export class Employee extends Model<Employee> {
   @PrimaryKey
   @AutoIncrement
   @Column(DataType.INTEGER)
@@ -21,25 +21,25 @@ export class Employee extends Model {
     type: DataType.TEXT,
     allowNull: true,
   })
-  address?: string;
+  address!: string;
 
   @Column({
     type: DataType.JSON,
     allowNull: true,
   })
-  roles?: string[];
+  roles!: string[];
 
   @Column({
     type: DataType.DATE,
     allowNull: true,
   })
-  dateOfBirth?: Date;
+  dateOfBirth!: Date;
 
   @Column({
     type: DataType.STRING(20),
     allowNull: true,
   })
-  phoneNumber?: string;
+  phoneNumber!: string;
 
   @Column({
     type: DataType.STRING(255),
@@ -58,7 +58,7 @@ export class Employee extends Model {
     type: DataType.TEXT,
     allowNull: true,
   })
-  photoUrl?: string;
+  photoUrl!: string;
 
   @HasMany(() => EmployeePosition)
   employeePositions!: EmployeePosition[];
