@@ -1,10 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
 import dotenv from 'dotenv';
-import { Organization } from '../models/Organization.js';
-import { Department } from '../models/Department.js';
-import { Position } from '../models/Position.js';
-import { Employee } from '../models/Employee.js';
-import { EmployeePosition } from '../models/EmployeePosition.js';
+import { Organization, Department, Position, Employee, EmployeePosition } from '../models/index.js';
 
 dotenv.config();
 

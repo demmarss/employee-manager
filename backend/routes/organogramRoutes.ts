@@ -1,9 +1,5 @@
 import express from 'express';
-import { Position } from '../models/Position.js';
-import { Department } from '../models/Department.js';
-import { Organization } from '../models/Organization.js';
-import { Employee } from '../models/Employee.js';
-import { EmployeePosition } from '../models/EmployeePosition.js';
+import { Position, Department, Organization, Employee, EmployeePosition } from '../models/index.js';
 import { Op } from 'sequelize';
 
 const router = express.Router();

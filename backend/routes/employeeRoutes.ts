@@ -1,8 +1,5 @@
 import express from 'express';
-import { Employee } from '../models/Employee.js';
-import { EmployeePosition } from '../models/EmployeePosition.js';
-import { Department } from '../models/Department.js';
-import { Position } from '../models/Position.js';
+import { Employee, EmployeePosition, Department, Position } from '../models/index.js';
 
 const router = express.Router();
 
